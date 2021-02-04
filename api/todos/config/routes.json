@@ -1,6 +1,14 @@
 {
   "routes": [
     {
+      "method": "DELETE",
+      "path": "/todos/clear_completed",
+      "handler": "todos.clear_completed",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "GET",
       "path": "/todos",
       "handler": "todos.find",
@@ -28,6 +36,14 @@
       "method": "POST",
       "path": "/todos",
       "handler": "todos.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/todos/toggle_completed",
+      "handler": "todos.toggle_completed",
       "config": {
         "policies": []
       }
